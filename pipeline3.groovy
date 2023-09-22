@@ -9,6 +9,7 @@ pipeline{
         }
         stage('stage'){
             steps{
+                sh '/opt/apache-maven-3.9.4/bin/mvn clean package'
                 echo 'test completed'
             }
         }
