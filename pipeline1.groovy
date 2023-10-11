@@ -1,14 +1,25 @@
-node{
-    stage ('pull'){
-        echo 'pull successful'
-    }
-    stage('build'){
-        echo 'build suceessful'
-    }
-    stage('test'){
-        echo 'test suceesful'
-    }
-    stage(deploy){
-        echo 'deploy succeesful'
+pipeline {
+    agent any
+    stages {
+        stage ('pull') {
+            steps {
+                echo 'pull completed'
+            }
+        }
+        stage ('build') {
+            steps {
+                echo 'build completed'
+            }
+        }
+        stage ('test') {
+            steps {
+                echo 'test completed'
+            }
+        }
+        stage ('deploy') {
+            steps {
+                echo 'deploy complted'
+            }
+        }
     }
 }
